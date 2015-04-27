@@ -5,11 +5,8 @@
 */
 function preloadImages(sources,callbackPercent,callbackComplete,temporary){    
     var loadedImages = 0;    
-    var totalImages = 0; 
+    var totalImages = Object.keys(sources).length; 
     var images = {};
-    for (var src in sources) {    
-        totalImages++;    
-    }    
     for (var src in sources) {    
         images[src] = new Image(); 
         images[src].onload = function(){ 
